@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game{
+    position: relative;
+    width: 1366px;
+    height: 768px;
+    background-color: black;
+    box-sizing: border-box;
+
+    header{
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        color:white;
+
+        .playerData{
+            display: flex;
+            gap:10px;
+            font-size: 20px;
+        }
+    }
+
+    .player{
+        position: absolute;
+        top: calc(768px / 2 - 50px);
+        width: 10px;
+        height: 100px;
+        background-color: white;
+
+        &:first-of-type{
+             left: 30px;
+         }
+
+        &:last-of-type{
+            right: 30px;
+        }
+    }
+
+
+    .line{
+        position: absolute;
+        height: 100vh;
+        border: 2px dashed white;
+        top: 0;
+        left: 50%;
+        box-sizing: border-box;
+    }
+
+    .ball{
+        position: absolute;
+        top: calc(768px / 2 - 15px);
+        left: calc(1366px / 2 - 15px);
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: white;
+    }
+
+}
+
+
